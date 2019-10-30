@@ -2,8 +2,11 @@ version: '2'
 
 services:
   dokuwiki:
-    image: ianculovici/minimal-dokuwiki:latest
-    container_name: "mywiki"
+#    image: ianculovici/minimal-dokuwiki:latest
+    build:
+      context: ./docker
+      dockerfile: Dockerfile
+    container_name: "kwzsply"
 #    volumes:
 #        - ./dokuwiki-data:/dokuwiki
 #    restart: always
