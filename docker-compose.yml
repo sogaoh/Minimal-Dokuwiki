@@ -3,13 +3,13 @@ version: '2'
 services:
   dokuwiki:
 #    image: ianculovici/minimal-dokuwiki:latest
+#    container_name: "mywiki"
     build:
-      context: ./docker
-      dockerfile: Dockerfile
-    container_name: "kwzsply"
-#    volumes:
-#        - ./dokuwiki-data:/dokuwiki
-#    restart: always
+      context: .
+      dockerfile: ./docker/Dockerfile
+    volumes:
+        - ./server/dokuwiki:/dokuwiki:cached
+    restart: always
     ports:
         - "7080:80"
 

@@ -1,1 +1,3 @@
-/dokuwiki-data/
+.idea
+*.log
+*.pid
